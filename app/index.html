@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Ledger</h1>
+    <p class="sub">The offline trophy guide &amp; tracker for all 55 official GTA VI trophies — every name, description and grade from the official list, a guide to each in our own words, a roadmap to the platinum, and the missables flagged.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-line"><strong id="progressCount">0 of 55 earned</strong> · <span id="progressPct">0%</span></p>
+    <div class="bar"><div class="bar-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="grade-counts">1 platinum · 2 gold · 6 silver · 46 bronze · 7 missable</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables <span class="count-pill">7</span></button>
+</nav>
+
+<div class="controls" id="controls">
+  <label class="field">Search <input id="search" type="search" placeholder="Trophy, mission, keyword…" autocomplete="off"></label>
+  <label class="field">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="field">Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="activity">Activities</option>
+      <option value="collectible">Collectibles</option>
+      <option value="crime">Crime</option>
+      <option value="misc">Everything else</option>
+    </select>
+  </label>
+  <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+  <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+  <label class="check"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+</div>
+
+<main class="layout">
+  <section class="list-col" id="listCol" aria-label="Trophy list">
+    <p class="list-meta" id="listMeta"></p>
+    <table class="trophies">
+      <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>Kind</th><th>Guide</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="empty" id="empty" hidden>No trophies match these filters.</p>
+  </section>
+  <aside class="detail-col" id="detailCol" aria-label="Trophy detail">
+    <div id="detail"></div>
+  </aside>
+</main>
+
+<section class="roadmap" id="roadmapView" hidden aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-intro">Play in this order. Stage 1 is the story; the rest is best done after the credits, when the whole map is open. The platinum lands with 100% Completion.</p>
+  <div id="stages"></div>
+</section>
+
+<section class="missables" id="missablesView" hidden aria-label="Missable trophies">
+  <h2>Missable trophies</h2>
+  <p class="missables-intro">Seven trophies need the right moment. A missable here means the trophy's moment can pass — a partner scenario, a one-time stunt, or a condition you must meet on the attempt. Story chapters and missions are <strong>not</strong> missable: missions can be replayed, so their trophies pop whenever you finish them.</p>
+  <div id="missableList"></div>
+</section>
+
+<footer class="sources">
+  <h2>Sources &amp; honesty note</h2>
+  <p>Names, descriptions and grades are the official 55-trophy PlayStation 5 list, frozen 2026-11-18, as published by Exophase (exophase.com/game/grand-theft-auto-vi-psn/trophies) and PSNProfiles (psnprofiles.com/trophies/43531-grand-theft-auto-vi) — verified against the live Exophase list on 2026-11-20. Count targets (250 stunts, 42 range challenges, 14 drone locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages, 500 choices) are PSN's progress targets. Every guide is written in our own words; where the official description does not pin down a trigger, the guide says so plainly instead of inventing one.</p>
+  <p class="fine">Leonida Ledger is an unofficial fan guide. No Rockstar Games logo or artwork is used. GTA VI trophy data belongs to its publishers; this guide is MIT-licensed and works fully offline.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
